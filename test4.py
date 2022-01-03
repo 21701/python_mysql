@@ -1,5 +1,6 @@
 import mysql.connector
 from mysql.connector.errors import Error
+import streamlit as st
 
 # 연결하는 코드
 # try 라고 나오면, 들여쓰기 되어있는 문장들을 실행하라라는 뜻
@@ -22,9 +23,9 @@ try :
     print(record_list)
 
     for row in record_list :
-        print('id =', row[0])
-        print('name =', row[1])
-        print('date =', row[2].isoformat())
+        print('id =', row['id'])
+        print('name =', row['name'])
+        print('date =', row['date'].isoformat())
 
 
 # 위의 코드를 실행하다가, 문제가 생기면, except를 실행하라는 뜻.

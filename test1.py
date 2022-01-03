@@ -19,7 +19,6 @@ except Error as e :
     print('Error while connecting to MySQL',e)
 # finally 는 try에서 에러가 나든 안나든, 무조건 실행하라는 뜻.
 finally :
-    print('finally')
     if connection.is_connected():
         connection.close()
         print('MySQL connection is closed')
